@@ -14,9 +14,12 @@ bin/
 
 # Go workspace file
 go.work
-
+habit-calendar-project.md
 # OS and IDE files
 .DS_Store
 Thumbs.db
 .idea/
 .vscode/
+
+# Project docs / notes
+habit-calendar-project.md

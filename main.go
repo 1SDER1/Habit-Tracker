@@ -17,7 +17,7 @@ func main() {
 		UpdatedAt:  time.Now(),
 	}
 	normalizedDate := core.NormalizeToHabitDate(time.Now(), 6)
-	isDue, err := core.IsHabitDue(habit, normalizedDate)
+	isDue, err := habit.IsDue(normalizedDate)
 	if err != nil {
 		panic(err)
 	}
