@@ -7,14 +7,9 @@ import (
 )
 
 func main() {
-	habit := core.Habit{
-		UUID:       "1",
-		Title:      "Пить воду",
-		RRule:      "FREQ=DAILY",
-		StartDate:  time.Now(),
-		IsArchived: false,
-		CreatedAt:  time.Now(),
-		UpdatedAt:  time.Now(),
+	habit, err := core.NewHabit("Пить воду", "FREQ=YEARLY;INTERVAL=1;UNTIL=20301231T235959Z;COUNT=10;BYDAY=MO,WE;")
+	if err != nil {
+		panic(err)
 	}
 	normalizedDate := core.NormalizeToHabitDate(time.Now(), 6)
 	isDue, err := habit.IsDue(normalizedDate)
