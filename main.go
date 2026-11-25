@@ -11,7 +11,7 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	normalizedDate := core.NormalizeToHabitDate(time.Now(), 6)
+	normalizedDate := core.HabitDate(time.Now(), 6)
 	isDue, err := habit.IsDue(normalizedDate)
 	if err != nil {
 		panic(err)

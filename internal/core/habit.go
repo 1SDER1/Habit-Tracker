@@ -180,7 +180,7 @@ func dateOnly(t time.Time) time.Time {
 	return time.Date(t.Year(), t.Month(), t.Day(), 0, 0, 0, 0, time.UTC)
 }
 
-func NormalizeToHabitDate(t time.Time, dayStartHour int) time.Time {
+func HabitDate(t time.Time, dayStartHour int) time.Time {
 	// Входит ли в привычку день, если привычка начинается в 6 утра, а сейчас 5 утра
 	// , то привычка считается за вчерашний день
 	if t.Hour() < dayStartHour {
